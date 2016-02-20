@@ -34,3 +34,6 @@ mongoimport --db vvydmk --collection ScoreDaily --drop --file ./tmp/parsedb/Scor
 mongoimport --db vvydmk --collection _Installation --drop --file ./tmp/parsedb/_Installation.json --jsonArray
 mongoimport --db vvydmk --collection _User --drop --file ./tmp/parsedb/_User.json --jsonArray
 mongoimport --db vvydmk --collection TestObject --drop --file ./tmp/parsedb/TestObject.json --jsonArray
+4. setup rails
+http://guides.rubyonrails.org/getting_started.html
+rails new railsapp
