@@ -40,6 +40,9 @@ mongoimport --db vvydmk --collection _User --drop --file ./tmp/parsedb/_User.jso
 mongoimport --db vvydmk --collection TestObject --drop --file ./tmp/parsedb/TestObject.json --jsonArray
 4. setup rails
 http://guides.rubyonrails.org/getting_started.html
+cd ${GIT_ROOT}/../
 rails new railsapp
 # ./railsapp/bin/bundle install --path ./railsapp/vendor/bundle
-./railsapp/bin/bundle install --path vendor/bundle
+# ./railsapp/bin/bundle install --path vendor/bundle
+cd railsapp
+./bin/bundle install --path vendor/bundle
