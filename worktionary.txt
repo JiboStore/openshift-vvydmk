@@ -37,3 +37,5 @@ mongoimport --db vvydmk --collection TestObject --drop --file ./tmp/parsedb/Test
 4. setup rails
 http://guides.rubyonrails.org/getting_started.html
 rails new railsapp
+# ./railsapp/bin/bundle install --path ./railsapp/vendor/bundle
+./railsapp/bin/bundle install --path vendor/bundle
