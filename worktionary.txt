@@ -52,4 +52,7 @@ cd railsapp
 bundle install nokogiri failed inside openshift,
 ssh to the gear, and run
 gem install nokogiri -- --use-system-libraries
-works...
+works., but the bundle install afterwards will still try to reinstall nokogiri and failed again, we'd need to make the bundle install nokogiri working, by doing this locally:
+bundle config --local build.nokogiri --use-system-libraries
+then commit and push the .bundle/config file
+if we need to run bundle install locally (e.g. to generate the Gemfile.lock file), we need to delete off the .bundle/config because that will cause the build to fail locally
