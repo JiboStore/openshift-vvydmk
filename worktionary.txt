@@ -1,0 +1,36 @@
+login to multiple account on openshift:
+http://stackoverflow.com/a/33318301/474330
+
+mongodb reference:
+https://docs.mongodb.org/getting-started/shell/
+
+mongodb GUI tool:
+https://github.com/jeromelebel/MongoHub-Mac
+
++ Ruby 2.0 cartridge, no auto-scaling
++ MongoDB 2.4 cartridge
++ RockMongo 1.1 cartridge
+
+MongoDB 2.4 database added.  Please make note of these credentials:
+
+   Root User:     admin
+   Root Password: m-XZxsLuU7PH
+   Database Name: ruby
+
+Connection URL: mongodb://$OPENSHIFT_MONGODB_DB_HOST:$OPENSHIFT_MONGODB_DB_PORT/
+
+Please make note of these MongoDB credentials:
+  RockMongo User: admin
+  RockMongo Password: m-XZxsLuU7PH
+URL: https://ruby-vvydmk.rhcloud.com/rockmongo/
+
+setting up the development on local:
+1. install mongodb - choose download manually from MongoDB download site and choose version 2.4 final
+https://docs.mongodb.org/getting-started/shell/tutorial/install-mongodb-on-os-x/
+2. run mongodb using this command:
+mongod --dbpath /Applications/Mongo/data/db
+3. import data into the collection
+mongoimport --db vvydmk --collection ScoreDaily --drop --file ./tmp/parsedb/ScoreDaily.json --jsonArray
+mongoimport --db vvydmk --collection _Installation --drop --file ./tmp/parsedb/_Installation.json --jsonArray
+mongoimport --db vvydmk --collection _User --drop --file ./tmp/parsedb/_User.json --jsonArray
+mongoimport --db vvydmk --collection TestObject --drop --file ./tmp/parsedb/TestObject.json --jsonArray

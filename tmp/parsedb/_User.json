@@ -1,0 +1,40 @@
+[
+	{
+        "authData": {
+            "facebook": {
+                "access_token": "CAAWtEfU555EBAG2QksAEQnLMXJP9lOpHMHPV6ZChKYmKQrjYu8w3K4VFBvUBQ86Uxa8EU8LyFFLFrASBvcHcjh7dZBIAtVyIGjV9ECBc1soKEFdKx7QBcU3j1S1P7tLArec43FWFrmmjmCiu1Qlq6g2y96ZBNEyJWo1OsPKQ7RGrHdia5wPRBEAFpAkCk3TGdtEB3L6ydDL8h0Qnb4PXODS4s0B44Bm0XZCQWsg4HgZDZD",
+                "expiration_date": "2015-12-19T14:17:25.000Z",
+                "id": "10154127801799546"
+            }
+        },
+        "bcryptPassword": "$2a$10$..uyc0vx3l3MRLX.JIiSr.SQ2/fb7MepKW8xhzvYHuadXzVw3DbDG",
+        "competitorFbid": "10153368070540606",
+        "createdAt": "2015-07-15T23:12:48.885Z",
+        "facebookname": "Vivian Saw",
+        "fbid": "10154127801799546",
+        "objectId": "H5cEMtUzMo",
+        "runCount": 790,
+        "sessionToken": "KGtW7lAhH1EFm4onMk3bbZZ2b",
+        "updatedAt": "2016-02-18T03:15:17.171Z",
+        "username": "MN79Ddn7Joij2YDBB64LLGZBs"
+    },
+	{
+        "authData": {
+            "facebook": {
+                "access_token": "CAAWtEfU555EBAHMX1fzRUO7D7XVY6FZA6gyUqAvDKURUqoigJ7a4qebUUw4Y8nXvwaONili7XRXwQ9ori26ZASQ5zRrmJh6qwKQfVUEhvh8eVFt1zUryEf8cZCs9uTkrOq0ZCHJJtgPFxPAig9yhW6DhBCLuJqPdMZBLPuV7w4NjdLKhmdCiwwSNyKMST3n0WGvedOvbiPktJ1yZB0aH5CX3rWPQULmZBKCt2WyrHomFwZDZD",
+                "expiration_date": "2016-04-17T13:52:12.000Z",
+                "id": "10153368070540606"
+            }
+        },
+        "bcryptPassword": "$2a$10$9mUW3JWI51GxM1VilAf5UO5BnFuuH3xnflOZ377X5Vpt05RbI0AzW",
+        "competitorFbid": "10154127801799546",
+        "createdAt": "2015-07-13T02:15:20.448Z",
+        "facebookname": "Hakim Hauston",
+        "fbid": "10153368070540606",
+        "objectId": "nLurZcAfBe",
+        "runCount": 2446,
+        "sessionToken": "0SwPDV9gY9pAMQoNbsY4AvkDu",
+        "updatedAt": "2016-02-18T06:25:22.236Z",
+        "username": "XgcWoZq4CQlBov1gbwEP4iUCK"
+    }
+]

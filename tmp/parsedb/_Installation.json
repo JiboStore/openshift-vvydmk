@@ -1,0 +1,117 @@
+[
+	{
+        "appIdentifier": "com.hakimhauston.vivian.challenge.beta",
+        "appName": "Challenge - Beta",
+        "appVersion": "1.4-BETA",
+        "channels": [
+            ""
+        ],
+        "competitorFbid": "10153368070540606",
+        "createdAt": "2015-10-20T14:17:24.244Z",
+        "currentUser": {
+            "__type": "Pointer",
+            "className": "_User",
+            "objectId": "H5cEMtUzMo"
+        },
+        "deviceToken": "APA91bHEeYdDNzwtC0OAnBiFKfsO1VanFuR5i7F90yvSGBPaO4a50tac-Svc-Jks2CUw7fA7JFX_FQoNpv_11vKvpctzWenJR3dJnyDRY7BYS5kZdkeHcAmxUdzMHQ9XYYz6AiUHRtmzUe03ZG8HG8adIvwuTP__6A",
+        "deviceTokenLastModified": 1445350626000,
+        "deviceType": "android",
+        "fbid": "10154127801799546",
+        "installationId": "e25b49f2-6c35-40cc-84d5-191bfc581a06",
+        "objectId": "48faWOJd6K",
+        "parseVersion": "1.9.2",
+        "pushType": "gcm",
+        "timeZone": "Asia/Kuala_Lumpur",
+        "updatedAt": "2016-02-08T06:16:05.185Z"
+    },
+	{
+        "appIdentifier": "com.hakimhauston.vivian.challenge.beta",
+        "appName": "Challenge - Beta",
+        "appVersion": "1.4-BETA",
+        "channels": [
+            ""
+        ],
+        "competitorFbid": "10154127801799546",
+        "createdAt": "2015-12-20T12:55:43.117Z",
+        "currentUser": {
+            "__type": "Pointer",
+            "className": "_User",
+            "objectId": "nLurZcAfBe"
+        },
+        "deviceToken": "APA91bHuCTH4ipFOXkpMtlhGwkL1ZYzlSmulZZ__m29lTvqK9Zd5YCNehU1j1HENciV3UlrNVBY7XchjkWnaqMoutTze2hZMTntwIK50KlOivsdvR85Jcxjb_NQ7xQtgL_rJr4FOWLmQbxQPYsSHnhg_T6oR5CfEdw",
+        "deviceTokenLastModified": 1450616103000,
+        "deviceType": "android",
+        "fbid": "10153368070540606",
+        "installationId": "e37c70bd-0640-4741-859b-541c452fda22",
+        "objectId": "SBpBhzy81n",
+        "parseVersion": "1.9.2",
+        "pushType": "gcm",
+        "timeZone": "Asia/Singapore",
+        "updatedAt": "2015-12-20T16:03:22.312Z"
+    },
+	{
+        "appIdentifier": "com.hakimhauston.vivian.challenge.beta",
+        "appName": "Challenge - Beta",
+        "appVersion": "1.4-BETA",
+        "channels": [
+            ""
+        ],
+        "createdAt": "2015-12-20T16:07:47.088Z",
+        "deviceType": "android",
+        "installationId": "7c6dcf6f-c93c-4b87-b055-73b722be600c",
+        "objectId": "bCvM8JD1l3",
+        "parseVersion": "1.9.2",
+        "timeZone": "GMT",
+        "updatedAt": "2015-12-20T16:07:47.088Z"
+    },
+	{
+        "appIdentifier": "com.hakimhauston.vivian.challenge.beta",
+        "appName": "Challenge - Beta",
+        "appVersion": "1.4-BETA",
+        "channels": [
+            ""
+        ],
+        "competitorFbid": "10154127801799546",
+        "createdAt": "2015-12-17T00:42:45.363Z",
+        "currentUser": {
+            "__type": "Pointer",
+            "className": "_User",
+            "objectId": "nLurZcAfBe"
+        },
+        "deviceToken": "APA91bFJ1SaJKTmIIiphsRkVyWLPrrQdljGBepusVg-S2CavjeTI0zYzdUzarankTzSdPcHF2SXbF7tPhazCeWac3YDFBtMtLuATcRllR9lqxU3UthM4TBqV7Tqn5_5JzWtyIY-kyu5CO5ORbuIhspL9ZjJZ_10shw",
+        "deviceTokenLastModified": 1443863296000,
+        "deviceType": "android",
+        "fbid": "10153368070540606",
+        "installationId": "dbb4082e-482b-4eef-a181-e4bcb6823f20",
+        "objectId": "foUOWnRtVo",
+        "parseVersion": "1.9.2",
+        "pushType": "gcm",
+        "timeZone": "Asia/Singapore",
+        "updatedAt": "2015-12-20T12:55:03.706Z"
+    },
+	{
+        "appIdentifier": "com.hakimhauston.vivian.challenge.beta",
+        "appName": "Challenge - Beta",
+        "appVersion": "1.4-BETA",
+        "channels": [
+            ""
+        ],
+        "competitorFbid": "10154127801799546",
+        "createdAt": "2015-12-26T23:19:11.393Z",
+        "currentUser": {
+            "__type": "Pointer",
+            "className": "_User",
+            "objectId": "nLurZcAfBe"
+        },
+        "deviceToken": "APA91bHuhvLZJNAGRF1dIsChiHkj275FVlaJfUr25ITgZM1B23YygZGUoxidmzHr1qvkuT9_DqsTTpfa2bg_dhg4AYS4IYVBI-j1xn7Xx56r1pp990gcPqsW0aZZbe9gY_IdhZmkuu4YucNJPnJTY7E0QF4iQOHw2Q",
+        "deviceTokenLastModified": 1451171934000,
+        "deviceType": "android",
+        "fbid": "10153368070540606",
+        "installationId": "d70c0340-07e5-486f-a075-1e5044ac38cc",
+        "objectId": "xSh42At0oy",
+        "parseVersion": "1.9.2",
+        "pushType": "gcm",
+        "timeZone": "Asia/Singapore",
+        "updatedAt": "2016-02-08T08:24:14.690Z"
+    }
+]
