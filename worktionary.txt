@@ -48,3 +48,8 @@ cd railsapp
 ./bin/bundle install --path vendor/bundle
 5. run the rail server locally
 ./bin/rails server
+
+bundle install nokogiri failed inside openshift,
+ssh to the gear, and run
+gem install nokogiri -- --use-system-libraries
+works...
