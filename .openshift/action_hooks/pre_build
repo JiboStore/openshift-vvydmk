@@ -1,3 +1,4 @@
 gem install nokogiri -- --use-system-libraries
 #gem install bundler
 #bundle config --local build.nokogiri --use-system-libraries
+gem uninstall rack -v 1.5.2
