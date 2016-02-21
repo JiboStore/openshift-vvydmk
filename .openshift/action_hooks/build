@@ -4,3 +4,5 @@
 # before the deploy step.  This script gets executed directly, so it
 # could be python, php, ruby, etc.
 export RAILS_ENV=development
+export HELLO=world
+OPEN=shift
