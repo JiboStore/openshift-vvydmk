@@ -4,6 +4,9 @@
 # before the deploy step.  This script gets executed directly, so it
 # could be python, php, ruby, etc.
 echo "build script executed!"
+echo $OPENSHIFT_LOG_DIR
+echo $RAILS_ENV
 export RAILS_ENV=development
+echo $RAILS_ENV
 export HELLO=world
 OPEN=shift
