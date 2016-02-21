@@ -60,3 +60,6 @@ if we need to run bundle install locally (e.g. to generate the Gemfile.lock file
 -a ruby: here is the <application name>
 rhc env set RAILS_ENV=development -a ruby
 rhc env-unset RAILS_ENV -a ruby
+
+create a route:
+./bin/rails generate controller welcome index
