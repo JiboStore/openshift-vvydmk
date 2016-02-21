@@ -8,5 +8,8 @@ echo $OPENSHIFT_LOG_DIR
 echo $RAILS_ENV
 export RAILS_ENV=development
 echo $RAILS_ENV
-export HELLO=world
-OPEN=shift
+echo "importing default db to mongodb"
+mongoimport --db $OPENSHIFT_APP_NAME --collection ScoreDaily --host $OPENSHIFT_MONGODB_DB_HOST --port $OPENSHIFT_MONGODB_DB_PORT --username $OPENSHIFT_MONGODB_DB_USERNAME --password $OPENSHIFT_MONGODB_DB_PASSWORD --drop --file $OPENSHIFT_REPO_DIR/tmp/parsedb/ScoreDaily.json --jsonArray
+mongoimport --db $OPENSHIFT_APP_NAME --collection _Installation --host $OPENSHIFT_MONGODB_DB_HOST --port $OPENSHIFT_MONGODB_DB_PORT --username $OPENSHIFT_MONGODB_DB_USERNAME --password $OPENSHIFT_MONGODB_DB_PASSWORD --drop --file $OPENSHIFT_REPO_DIR/tmp/parsedb/_Installation.json --jsonArray
+mongoimport --db $OPENSHIFT_APP_NAME --collection _User --host $OPENSHIFT_MONGODB_DB_HOST --port $OPENSHIFT_MONGODB_DB_PORT --username $OPENSHIFT_MONGODB_DB_USERNAME --password $OPENSHIFT_MONGODB_DB_PASSWORD --drop --file $OPENSHIFT_REPO_DIR/tmp/parsedb/_User.json --jsonArray
+mongoimport --db $OPENSHIFT_APP_NAME --collection TestObject --host $OPENSHIFT_MONGODB_DB_HOST --port $OPENSHIFT_MONGODB_DB_PORT --username $OPENSHIFT_MONGODB_DB_USERNAME --password $OPENSHIFT_MONGODB_DB_PASSWORD --drop --file $OPENSHIFT_REPO_DIR/tmp/parsedb/TestObject.json --jsonArray
