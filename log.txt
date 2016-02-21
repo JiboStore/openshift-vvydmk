@@ -1,0 +1,28 @@
+RAILS_ENV=development
+=====================
+Could not find rake-10.5.0 in any of the sources (Bundler::GemNotFound)
+  /var/lib/openshift/56c8691489f5cf5b56000141/.gem/gems/bundler-1.11.2/lib/bundler/spec_set.rb:94:in `block in materialize'
+  /var/lib/openshift/56c8691489f5cf5b56000141/.gem/gems/bundler-1.11.2/lib/bundler/spec_set.rb:87:in `map!'
+  /var/lib/openshift/56c8691489f5cf5b56000141/.gem/gems/bundler-1.11.2/lib/bundler/spec_set.rb:87:in `materialize'
+  /var/lib/openshift/56c8691489f5cf5b56000141/.gem/gems/bundler-1.11.2/lib/bundler/definition.rb:137:in `specs'
+  /var/lib/openshift/56c8691489f5cf5b56000141/.gem/gems/bundler-1.11.2/lib/bundler/definition.rb:182:in `specs_for'
+  /var/lib/openshift/56c8691489f5cf5b56000141/.gem/gems/bundler-1.11.2/lib/bundler/definition.rb:171:in `requested_specs'
+  /var/lib/openshift/56c8691489f5cf5b56000141/.gem/gems/bundler-1.11.2/lib/bundler/environment.rb:18:in `requested_specs'
+  /var/lib/openshift/56c8691489f5cf5b56000141/.gem/gems/bundler-1.11.2/lib/bundler/runtime.rb:13:in `setup'
+  /var/lib/openshift/56c8691489f5cf5b56000141/.gem/gems/bundler-1.11.2/lib/bundler.rb:92:in `setup'
+  /var/lib/openshift/56c8691489f5cf5b56000141/.gem/gems/bundler-1.11.2/lib/bundler/setup.rb:18:in `<top (required)>'
+  /opt/rh/ruby200/root/usr/share/rubygems/rubygems/core_ext/kernel_require.rb:135:in `require'
+  /opt/rh/ruby200/root/usr/share/rubygems/rubygems/core_ext/kernel_require.rb:135:in `rescue in require'
+  /opt/rh/ruby200/root/usr/share/rubygems/rubygems/core_ext/kernel_require.rb:144:in `require'
+  /opt/rh/ruby200/root/usr/share/gems/gems/passenger-4.0.18/lib/phusion_passenger/loader_shared_helpers.rb:212:in `run_load_path_setup_code'
+  /opt/rh/ruby200/root/usr/share/gems/gems/passenger-4.0.18/helper-scripts/rack-loader.rb:69:in `load_app'
+  /opt/rh/ruby200/root/usr/share/gems/gems/passenger-4.0.18/helper-scripts/rack-loader.rb:96:in `<module:App>'
+  /opt/rh/ruby200/root/usr/share/gems/gems/passenger-4.0.18/helper-scripts/rack-loader.rb:4:in `<module:PhusionPassenger>'
+  /opt/rh/ruby200/root/usr/share/gems/gems/passenger-4.0.18/helper-scripts/rack-loader.rb:3:in `<main>'
+116.87.125.159 - - [21/Feb/2016:01:27:03 -0500] "GET / HTTP/1.1" 500 682 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+116.87.125.159 - - [21/Feb/2016:01:27:04 -0500] "GET /favicon.ico HTTP/1.1" 200 - "http://ruby-vvydmk.rhcloud.com/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+
+RAILS_ENV= #unset
+=================
+116.87.125.159 - - [21/Feb/2016:01:49:18 -0500] "GET / HTTP/1.1" 404 1564 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+116.87.125.159 - - [21/Feb/2016:01:49:19 -0500] "GET /favicon.ico HTTP/1.1" 200 - "http://ruby-vvydmk.rhcloud.com/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
