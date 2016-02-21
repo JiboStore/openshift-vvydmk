@@ -57,4 +57,6 @@ bundle config --local build.nokogiri --use-system-libraries
 then commit and push the .bundle/config file
 if we need to run bundle install locally (e.g. to generate the Gemfile.lock file), we need to delete off the .bundle/config because that will cause the build to fail locally
 
+-a ruby: here is the <application name>
 rhc env set RAILS_ENV=development -a ruby
+rhc env-unset RAILS_ENV -a ruby
