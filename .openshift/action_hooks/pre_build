@@ -1,3 +1,9 @@
+#!/bin/bash
+echo "pre_build script executed"
+export RAILS_ENV=development
+export HELLO=world
+OPEN=shift
+
 gem uninstall rack -v 1.5.2
 gem install rack -v 1.6.4
 gem install nokogiri -- --use-system-libraries
