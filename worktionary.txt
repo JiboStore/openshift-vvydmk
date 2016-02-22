@@ -33,17 +33,20 @@ setting up the development on local:
 https://docs.mongodb.org/getting-started/shell/tutorial/install-mongodb-on-os-x/
 2. run mongodb using this command:
 mongod --dbpath /Applications/Mongo/data/db
-3. import data into the collection
+3a. import data into the collection
 mongoimport --db vvydmk --collection ScoreDaily --drop --file ./tmp/parsedb/ScoreDaily.json --jsonArray
 mongoimport --db vvydmk --collection _Installation --drop --file ./tmp/parsedb/_Installation.json --jsonArray
 mongoimport --db vvydmk --collection _User --drop --file ./tmp/parsedb/_User.json --jsonArray
 mongoimport --db vvydmk --collection TestObject --drop --file ./tmp/parsedb/TestObject.json --jsonArray
 
-import data into openshift: note that the db need to be $OPENSHIFT_APP_NAME
+3b. import data into openshift: note that the db need to be $OPENSHIFT_APP_NAME
 mongoimport --db $OPENSHIFT_APP_NAME --collection ScoreDaily --host $OPENSHIFT_MONGODB_DB_HOST --port $OPENSHIFT_MONGODB_DB_PORT --username $OPENSHIFT_MONGODB_DB_USERNAME --password $OPENSHIFT_MONGODB_DB_PASSWORD --drop --file $OPENSHIFT_REPO_DIR/tmp/parsedb/ScoreDaily.json --jsonArray
 mongoimport --db $OPENSHIFT_APP_NAME --collection _Installation --host $OPENSHIFT_MONGODB_DB_HOST --port $OPENSHIFT_MONGODB_DB_PORT --username $OPENSHIFT_MONGODB_DB_USERNAME --password $OPENSHIFT_MONGODB_DB_PASSWORD --drop --file $OPENSHIFT_REPO_DIR/tmp/parsedb/_Installation.json --jsonArray
 mongoimport --db $OPENSHIFT_APP_NAME --collection _User --host $OPENSHIFT_MONGODB_DB_HOST --port $OPENSHIFT_MONGODB_DB_PORT --username $OPENSHIFT_MONGODB_DB_USERNAME --password $OPENSHIFT_MONGODB_DB_PASSWORD --drop --file $OPENSHIFT_REPO_DIR/tmp/parsedb/_User.json --jsonArray
 mongoimport --db $OPENSHIFT_APP_NAME --collection TestObject --host $OPENSHIFT_MONGODB_DB_HOST --port $OPENSHIFT_MONGODB_DB_PORT --username $OPENSHIFT_MONGODB_DB_USERNAME --password $OPENSHIFT_MONGODB_DB_PASSWORD --drop --file $OPENSHIFT_REPO_DIR/tmp/parsedb/TestObject.json --jsonArray
+
+3c. setup mongodb with mongoid
+rails g mongoid:config
 
 4. setup rails
 http://guides.rubyonrails.org/getting_started.html
