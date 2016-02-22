@@ -48,6 +48,10 @@ mongoimport --db $OPENSHIFT_APP_NAME --collection TestObject --host $OPENSHIFT_M
 3c. setup mongodb with mongoid
 rails g mongoid:config
 
+3d. generate mongoid model
+rails generate model #printout helps
+rails generate model ScoreDaily
+
 4. setup rails
 http://guides.rubyonrails.org/getting_started.html
 cd ${GIT_ROOT}/../
