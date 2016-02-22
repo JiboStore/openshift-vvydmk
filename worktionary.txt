@@ -85,3 +85,8 @@ create a route:
 
 NOTE for commit-id 28239dd:
 It is actually working, just that the collection mongoid is searching is score_dailies
+
+<%= "#{ENV['OPENSHIFT_MONGODB_HOST']}:#{ENV['OPENSHIFT_MONGODB_PORT']}" %>
+puts "#{ENV['OPENSHIFT_MONGODB_HOST']}:#{ENV['OPENSHIFT_MONGODB_PORT']}"
+<%= "#{ENV['OPENSHIFT_MONGODB_HOST']}:#{ENV['OPENSHIFT_MONGODB_PORT']}" %>
+http://help.cloud66.com/database-management/mongodb-replica-sets
