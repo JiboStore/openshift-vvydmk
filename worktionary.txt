@@ -71,9 +71,15 @@ bundle config --local build.nokogiri --use-system-libraries
 then commit and push the .bundle/config file
 if we need to run bundle install locally (e.g. to generate the Gemfile.lock file), we need to delete off the .bundle/config because that will cause the build to fail locally
 
+to delete off the global bundle config:
+bundle
+
 -a ruby: here is the <application name>
 rhc env set RAILS_ENV=development -a ruby
 rhc env-unset RAILS_ENV -a ruby
 
 create a route:
 ./bin/rails generate controller welcome index
+
+NOTE for commit-id 28239dd:
+It is actually working, just that the collection mongoid is searching is score_dailies
