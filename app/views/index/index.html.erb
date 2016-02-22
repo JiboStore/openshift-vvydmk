@@ -1,4 +1,16 @@
 <h1>Index#index</h1>
 <p>Find me in app/views/index/index.html.erb</p>
 
-<p><%= debug(@scoredaily) %></p>
+<h2>TotalCount: <%= @totalCount %></h2>
+
+<h2>ScoreCount: <%= @onehourCriteria.count %></h2>
+
+<h3>Iterate result:</h3>
+<ol>
+	<%= @onehourCriteria.each do |score|
+	score.createdAt
+	end
+	%>
+</ol>
+
+<p><%= debug(@onehourCriteria) %></p>
