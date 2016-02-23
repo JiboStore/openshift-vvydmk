@@ -131,3 +131,18 @@ PHP Warning:  Module 'mongo' already loaded in Unknown on line 0
 [ 2016-02-23 02:13:42.9869 106875/7f607c190700 Pool2/Spawner.h:159 ]: [App 107795 stderr] WARN: Clearing out unresolved specs.
 [ 2016-02-23 02:13:42.9869 106875/7f607c190700 Pool2/Spawner.h:159 ]: [App 107795 stderr] Please report a bug if this causes problems.
 - - - [23/Feb/2016:02:13:43 -0500] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.2.15 (Red Hat) (internal dummy connection)"
+
+=============================================================================================
+
+[ 2016-02-23 05:32:17.2833 414620/7f998c6de700 Pool2/Spawner.h:738 ]: [App 416106 stdout]   Each client configuration must provide a database so Mongoid knows where the default database to persist to. What was provided was: {"hosts"=>"127.3.95.2:27017", "options"=>{"user"=>"admin", "password"=>"6dWPx698Z-9k"}}.
+[ 2016-02-23 05:32:17.2833 414620/7f998c6de700 Pool2/Spawner.h:738 ]: [App 416106 stdout] resolution:
+[ 2016-02-23 05:32:17.2834 414620/7f998c6de700 Pool2/Spawner.h:738 ]: [App 416106 stdout]   If configuring via a mongoid.yml, ensure that within your :default section a :database value for the client's default database is defined.
+[ 2016-02-23 05:32:17.2834 414620/7f998c6de700 Pool2/Spawner.h:738 ]: [App 416106 stdout] 
+[ 2016-02-23 05:32:17.2834 414620/7f998c6de700 Pool2/Spawner.h:738 ]: [App 416106 stdout]  Example:
+[ 2016-02-23 05:32:17.2834 414620/7f998c6de700 Pool2/Spawner.h:738 ]: [App 416106 stdout]    development:
+[ 2016-02-23 05:32:17.2834 414620/7f998c6de700 Pool2/Spawner.h:738 ]: [App 416106 stdout]      clients:
+[ 2016-02-23 05:32:17.2834 414620/7f998c6de700 Pool2/Spawner.h:738 ]: [App 416106 stdout]        default:
+[ 2016-02-23 05:32:17.2834 414620/7f998c6de700 Pool2/Spawner.h:738 ]: [App 416106 stdout]          database: my_app_db
+[ 2016-02-23 05:32:17.2834 414620/7f998c6de700 Pool2/Spawner.h:738 ]: [App 416106 stdout]          hosts:
+[ 2016-02-23 05:32:17.2834 414620/7f998c6de700 Pool2/Spawner.h:738 ]: [App 416106 stdout]            - localhost:27017
+[ 2016-02-23 05:32:17.2834 414620/7f998c6de700 Pool2/Spawner.h:738 ]: [App 416106 stdout] 
