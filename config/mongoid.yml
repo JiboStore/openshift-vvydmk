@@ -140,13 +140,13 @@ production:
       #database: ruby
       # Provides the hosts the default client can connect to. Must be an array
       # of host:port pairs. (required)
-	  #this following uri: is working
+      #this following uri: is working
       #uri: mongodb://admin:6dWPx698Z-9k@127.3.95.2:27017/ruby
       # need to do:
       # rhc env set MY_OPENSHIFT_MONGODB_DB_CONNECTIONSTRING=mongodb://admin:6dWPx698Z-9k@127.3.95.2:27017/ruby
-	  uri: <%= ENV['MY_OPENSHIFT_MONGODB_DB_CONNECTIONSTRING'] %>
       #uri: <%= ENV['MY_OPENSHIFT_MONGODB_DB_CONNECTIONSTRING'] %>
-      #hosts: <%= "#{ENV['OPENSHIFT_MONGODB_DB_HOST']}:#{ENV['OPENSHIFT_MONGODB_DB_PORT']}" %>
+      #uri: <%= ENV['MY_OPENSHIFT_MONGODB_DB_CONNECTIONSTRING'] %>
+      hosts: <%= "#{ENV['OPENSHIFT_MONGODB_DB_HOST']}:#{ENV['OPENSHIFT_MONGODB_DB_PORT']}" %>
       #host: <%= ENV['OPENSHIFT_MONGODB_DB_HOST'] %>
       #port: <%= ENV['OPENSHIFT_MONGODB_DB_PORT'] %>
       options:
