@@ -77,3 +77,57 @@ resolution:
   /var/lib/openshift/56c8691489f5cf5b56000141/app-root/runtime/repo/vendor/bundle/ruby/gems/mongoid-5.1.1/lib/mongoid/config/validators/client.rb:84:in `validate_client_uri'
   /var/lib/openshift/56c8691489f5cf5b56000141/app-root/runtime/repo/vendor/bundle/ruby/gems/mongoid-5.1.1/lib/mongoid/config/validators/client.rb:30:in `block in validate'
   /var/lib/openshift/56c8691489f5cf5b56000141/app-root/runtime/repo/vendor/bundle/ruby/gems/mongoid-5.1.1/lib/mongoid/config/validators/client.rb:27:in `each_pair'
+
+=============================================================================================
+
+==> app-root/logs/mongodb.log <==
+note: noprealloc may hurt performance in many applications
+Tue Feb 23 02:12:16.668 [initandlisten] MongoDB starting : pid=103767 port=27017 dbpath=/var/lib/openshift/56c8691489f5cf5b56000141/mongodb/data/ 64-bit host=ex-std-node583.prod.rhcloud.com
+Tue Feb 23 02:12:16.669 [initandlisten] db version v2.4.9
+Tue Feb 23 02:12:16.669 [initandlisten] git version: nogitversion
+Tue Feb 23 02:12:16.669 [initandlisten] build info: Linux x86-025.build.eng.bos.redhat.com 2.6.32-431.5.1.el6.x86_64 #1 SMP Fri Jan 10 14:46:43 EST 2014 x86_64 BOOST_LIB_VERSION=1_41
+Tue Feb 23 02:12:16.669 [initandlisten] allocator: tcmalloc
+Tue Feb 23 02:12:16.669 [initandlisten] options: { auth: true, bind_ip: "127.3.95.2", command: [ "run" ], config: "/var/lib/openshift/56c8691489f5cf5b56000141/mongodb//conf/mongodb.conf", dbpath: "/var/lib/openshift/56c8691489f5cf5b56000141/mongodb/data/", nohttpinterface: "true", noprealloc: "true", pidfilepath: "/var/lib/openshift/56c8691489f5cf5b56000141/mongodb/pid/mongodb.pid", quiet: "true", smallfiles: "true" }
+Tue Feb 23 02:12:16.692 [initandlisten] journal dir=/var/lib/openshift/56c8691489f5cf5b56000141/mongodb/data/journal
+Tue Feb 23 02:12:16.692 [initandlisten] recover : no journal files present, no recovery needed
+Tue Feb 23 02:12:17.084 [initandlisten] waiting for connections on port 27017
+Tue Feb 23 02:12:17.779 [conn1]  authenticate db: admin { authenticate: 1, nonce: "906c5829ef057a86", user: "admin", key: "dee4bd7d8ec574d9f2acf55de9f73399" }
+
+==> app-root/logs/rockmongo.log <==
+[Tue Feb 23 02:12:19 2016] [warn] module php5_module is already loaded, skipping
+[Tue Feb 23 02:12:19 2016] [notice] SELinux policy enabled; httpd running as context unconfined_u:system_r:openshift_t:s0:c1,c704
+[Tue Feb 23 02:12:19 2016] [warn] module php5_module is already loaded, skipping
+PHP Warning:  Module 'mongo' already loaded in Unknown on line 0
+[Tue Feb 23 02:12:19 2016] [notice] Digest: generating secret for digest authentication ...
+[Tue Feb 23 02:12:19 2016] [notice] Digest: done
+[Tue Feb 23 02:12:19 2016] [notice] Apache/2.2.15 (Unix) PHP/5.3.3 configured -- resuming normal operations
+
+==> app-root/logs/ruby.log <==
+[Tue Feb 23 02:13:11 2016] [notice] SELinux policy enabled; httpd running as context unconfined_u:system_r:openshift_t:s0:c1,c704
+[ 2016-02-23 02:13:11.3990 106849/7f4318ce9720 agents/Watchdog/Main.cpp:450 ]: Options: { 'analytics_log_user' => 'nobody', 'default_group' => 'nobody', 'default_python' => 'python', 'default_ruby' => 'ruby', 'default_user' => 'nobody', 'log_level' => '0', 'max_instances_per_app' => '0', 'max_pool_size' => '3', 'passenger_root' => '/opt/rh/ruby200/root/usr/share/gems/gems/passenger-4.0.18/lib/phusion_passenger/locations.ini', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzEyNy4zLjk1LjE6ODA4MC8A', 'temp_dir' => '/tmp/passenger', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'true', 'web_server_pid' => '106839', 'web_server_type' => 'apache', 'web_server_worker_gid' => '1726', 'web_server_worker_uid' => '1726' }
+[ 2016-02-23 02:13:11.5043 106853/7f0f58e5c720 agents/HelperAgent/Main.cpp:602 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger/passenger.1.0.106839/generation-0/request
+[ 2016-02-23 02:13:11.5935 106858/7fdad49997e0 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger/passenger.1.0.106839/generation-0/logging
+[ 2016-02-23 02:13:11.5940 106849/7f4318ce9720 agents/Watchdog/Main.cpp:631 ]: All Phusion Passenger agents started!
+[ 2016-02-23 02:13:11.6902 106872/7f579facf720 agents/Watchdog/Main.cpp:450 ]: Options: { 'analytics_log_user' => 'nobody', 'default_group' => 'nobody', 'default_python' => 'python', 'default_ruby' => 'ruby', 'default_user' => 'nobody', 'log_level' => '0', 'max_instances_per_app' => '0', 'max_pool_size' => '3', 'passenger_root' => '/opt/rh/ruby200/root/usr/share/gems/gems/passenger-4.0.18/lib/phusion_passenger/locations.ini', 'pool_idle_time' => '300', 'prestart_urls' => 'aHR0cDovLzEyNy4zLjk1LjE6ODA4MC8A', 'temp_dir' => '/tmp/passenger', 'union_station_gateway_address' => 'gateway.unionstationapp.com', 'union_station_gateway_port' => '443', 'user_switching' => 'true', 'web_server_pid' => '106839', 'web_server_type' => 'apache', 'web_server_worker_gid' => '1726', 'web_server_worker_uid' => '1726' }
+[ 2016-02-23 02:13:11.7924 106875/7f607ccb8720 agents/HelperAgent/Main.cpp:602 ]: PassengerHelperAgent online, listening at unix:/tmp/passenger/passenger.1.0.106839/generation-1/request
+[ 2016-02-23 02:13:11.8836 106881/7efc2d1697e0 agents/LoggingAgent/Main.cpp:318 ]: PassengerLoggingAgent online, listening at unix:/tmp/passenger/passenger.1.0.106839/generation-1/logging
+[ 2016-02-23 02:13:11.8842 106872/7f579facf720 agents/Watchdog/Main.cpp:631 ]: All Phusion Passenger agents started!
+[Tue Feb 23 02:13:11 2016] [notice] Digest: generating secret for digest authentication ...
+[Tue Feb 23 02:13:11 2016] [notice] Digest: done
+[Tue Feb 23 02:13:11 2016] [notice] Apache/2.2.15 (Unix) Phusion_Passenger/4.0.18 configured -- resuming normal operations
+[ 2016-02-23 02:13:15.2842 106875/7f607c1d1700 Pool2/Spawner.h:738 ]: [App 106955 stdout] 
+[ 2016-02-23 02:13:18.4846 106875/7f607c190700 Pool2/Spawner.h:159 ]: [App 106955 stderr] WARN: Unresolved specs during Gem::Specification.reset:
+[ 2016-02-23 02:13:18.4846 106875/7f607c190700 Pool2/Spawner.h:159 ]: [App 106955 stderr]       rack (>= 0)
+[ 2016-02-23 02:13:18.4846 106875/7f607c190700 Pool2/Spawner.h:159 ]: [App 106955 stderr] WARN: Clearing out unresolved specs.
+[ 2016-02-23 02:13:18.4846 106875/7f607c190700 Pool2/Spawner.h:159 ]: [App 106955 stderr] Please report a bug if this causes problems.
+[ 2016-02-23 02:13:41.4807 106875/7f607c1d1700 Pool2/Spawner.h:738 ]: [App 107795 stdout] 
+- - - [23/Feb/2016:02:13:14 -0500] "HEAD / HTTP/1.1" 500 - "-" "-"
+- - - [23/Feb/2016:02:13:15 -0500] "HEAD / HTTP/1.1" 500 - "-" "-"
+- - - [23/Feb/2016:02:13:42 -0500] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.2.15 (Red Hat) (internal dummy connection)"
+[ 2016-02-23 02:13:42.9867 106875/7f607c190700 Pool2/Spawner.h:159 ]: [App 107795 stderr] WARN: Unresolved specs during Gem::Specification.reset:
+[ 2016-02-23 02:13:42.9868 106875/7f607c190700 Pool2/Spawner.h:151 ]: [App 107795 stderr] 
+[ 2016-02-23 02:13:42.9869 106875/7f607c190700 Pool2/Spawner.h:159 ]: [App 107795 stderr]       rack (>= 0)
+[ 2016-02-23 02:13:42.9869 106875/7f607c190700 Pool2/Spawner.h:159 ]: [App 107795 stderr] 
+[ 2016-02-23 02:13:42.9869 106875/7f607c190700 Pool2/Spawner.h:159 ]: [App 107795 stderr] WARN: Clearing out unresolved specs.
+[ 2016-02-23 02:13:42.9869 106875/7f607c190700 Pool2/Spawner.h:159 ]: [App 107795 stderr] Please report a bug if this causes problems.
+- - - [23/Feb/2016:02:13:43 -0500] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.2.15 (Red Hat) (internal dummy connection)"
