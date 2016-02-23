@@ -141,8 +141,8 @@ production:
       # Provides the hosts the default client can connect to. Must be an array
       # of host:port pairs. (required)
       uri: <%= ENV['OPENSHIFT_MONGODB_DB_URL'] %>
-      host: <%= ENV['OPENSHIFT_MONGODB_DB_HOST'] %>
-      port: <%= ENV['OPENSHIFT_MONGODB_DB_PORT'] %>
+      #host: <%= ENV['OPENSHIFT_MONGODB_DB_HOST'] %>
+      #port: <%= ENV['OPENSHIFT_MONGODB_DB_PORT'] %>
       options:
         # Change the default write concern. (default = { w: 1 })
         # write:
