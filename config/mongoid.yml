@@ -140,8 +140,8 @@ production:
       database: ruby
       # Provides the hosts the default client can connect to. Must be an array
       # of host:port pairs. (required)
-      hosts:
-		- <%= \"#{ENV['OPENSHIFT_MONGODB_HOST']}:#{ENV['OPENSHIFT_MONGODB_PORT']}\" %>
+      host: <%= ENV['OPENSHIFT_MONGODB_DB_HOST'] %>
+      port: <%= ENV['OPENSHIFT_MONGODB_DB_PORT'] %>
       options:
         # Change the default write concern. (default = { w: 1 })
         # write:
