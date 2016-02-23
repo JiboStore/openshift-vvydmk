@@ -1,28 +1,64 @@
-RAILS_ENV=development
-=====================
-Could not find rake-10.5.0 in any of the sources (Bundler::GemNotFound)
-  /var/lib/openshift/56c8691489f5cf5b56000141/.gem/gems/bundler-1.11.2/lib/bundler/spec_set.rb:94:in `block in materialize'
-  /var/lib/openshift/56c8691489f5cf5b56000141/.gem/gems/bundler-1.11.2/lib/bundler/spec_set.rb:87:in `map!'
-  /var/lib/openshift/56c8691489f5cf5b56000141/.gem/gems/bundler-1.11.2/lib/bundler/spec_set.rb:87:in `materialize'
-  /var/lib/openshift/56c8691489f5cf5b56000141/.gem/gems/bundler-1.11.2/lib/bundler/definition.rb:137:in `specs'
-  /var/lib/openshift/56c8691489f5cf5b56000141/.gem/gems/bundler-1.11.2/lib/bundler/definition.rb:182:in `specs_for'
-  /var/lib/openshift/56c8691489f5cf5b56000141/.gem/gems/bundler-1.11.2/lib/bundler/definition.rb:171:in `requested_specs'
-  /var/lib/openshift/56c8691489f5cf5b56000141/.gem/gems/bundler-1.11.2/lib/bundler/environment.rb:18:in `requested_specs'
-  /var/lib/openshift/56c8691489f5cf5b56000141/.gem/gems/bundler-1.11.2/lib/bundler/runtime.rb:13:in `setup'
-  /var/lib/openshift/56c8691489f5cf5b56000141/.gem/gems/bundler-1.11.2/lib/bundler.rb:92:in `setup'
-  /var/lib/openshift/56c8691489f5cf5b56000141/.gem/gems/bundler-1.11.2/lib/bundler/setup.rb:18:in `<top (required)>'
-  /opt/rh/ruby200/root/usr/share/rubygems/rubygems/core_ext/kernel_require.rb:135:in `require'
-  /opt/rh/ruby200/root/usr/share/rubygems/rubygems/core_ext/kernel_require.rb:135:in `rescue in require'
-  /opt/rh/ruby200/root/usr/share/rubygems/rubygems/core_ext/kernel_require.rb:144:in `require'
-  /opt/rh/ruby200/root/usr/share/gems/gems/passenger-4.0.18/lib/phusion_passenger/loader_shared_helpers.rb:212:in `run_load_path_setup_code'
-  /opt/rh/ruby200/root/usr/share/gems/gems/passenger-4.0.18/helper-scripts/rack-loader.rb:69:in `load_app'
-  /opt/rh/ruby200/root/usr/share/gems/gems/passenger-4.0.18/helper-scripts/rack-loader.rb:96:in `<module:App>'
-  /opt/rh/ruby200/root/usr/share/gems/gems/passenger-4.0.18/helper-scripts/rack-loader.rb:4:in `<module:PhusionPassenger>'
-  /opt/rh/ruby200/root/usr/share/gems/gems/passenger-4.0.18/helper-scripts/rack-loader.rb:3:in `<main>'
-116.87.125.159 - - [21/Feb/2016:01:27:03 -0500] "GET / HTTP/1.1" 500 682 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
-116.87.125.159 - - [21/Feb/2016:01:27:04 -0500] "GET /favicon.ico HTTP/1.1" 200 - "http://ruby-vvydmk.rhcloud.com/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+remote: Starting Ruby cartridge
+remote: -------------------------
+remote: Git Post-Receive Result: success
+remote: Activation status: success
+remote: Deployment completed with status: success
+To ssh://56c8691489f5cf5b56000141@ruby-vvydmk.rhcloud.com/~/git/ruby.git/
+   7e57b4e..854a810  master -> master
+HakimRocketsMBP:openshift-vvydmk HakimHauston$ rhc tail -a ruby
+/Library/Ruby/Gems/2.0.0/gems/highline-1.6.21/lib/highline/system_extensions.rb:230: warning: Insecure world writable dir /Applications/Couchbase Server.app/Contents/Resources/couchbase-core in PATH, mode 040777
+RSA 1024 bit CA certificates are loaded due to old openssl compatibility
+==> app-root/logs/ruby.log <==
+- - - [23/Feb/2016:00:54:37 -0500] "HEAD / HTTP/1.1" 500 - "-" "-"
+- - - [23/Feb/2016:00:55:07 -0500] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.2.15 (Red Hat) (internal dummy connection)"
+[ 2016-02-23 00:55:08.1397 299243/7f4d405ba700 Pool2/Spawner.h:159 ]: [App 300473 stderr] WARN: Unresolved specs during Gem::Specification.reset:
+[ 2016-02-23 00:55:08.1399 299243/7f4d405ba700 Pool2/Spawner.h:151 ]: [App 300473 stderr] 
+[ 2016-02-23 00:55:08.1401 299243/7f4d405ba700 Pool2/Spawner.h:159 ]: [App 300473 stderr]       rack (>= 0)
+[ 2016-02-23 00:55:08.1402 299243/7f4d405ba700 Pool2/Spawner.h:151 ]: [App 300473 stderr] 
+[ 2016-02-23 00:55:08.1403 299243/7f4d405ba700 Pool2/Spawner.h:159 ]: [App 300473 stderr] WARN: Clearing out unresolved specs.
+[ 2016-02-23 00:55:08.1404 299243/7f4d405ba700 Pool2/Spawner.h:151 ]: [App 300473 stderr] 
+[ 2016-02-23 00:55:08.1405 299243/7f4d405ba700 Pool2/Spawner.h:159 ]: [App 300473 stderr] Please report a bug if this causes problems.
+[ 2016-02-23 00:55:08.1406 299243/7f4d405ba700 Pool2/Spawner.h:151 ]: [App 300473 stderr] 
 
-RAILS_ENV= #unset
-=================
-116.87.125.159 - - [21/Feb/2016:01:49:18 -0500] "GET / HTTP/1.1" 404 1564 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
-116.87.125.159 - - [21/Feb/2016:01:49:19 -0500] "GET /favicon.ico HTTP/1.1" 200 - "http://ruby-vvydmk.rhcloud.com/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36"
+==> app-root/logs/mongodb.log <==
+Tue Feb 23 00:53:39.890 [initandlisten] MongoDB starting : pid=295202 port=27017 dbpath=/var/lib/openshift/56c8691489f5cf5b56000141/mongodb/data/ 64-bit host=ex-std-node583.prod.rhcloud.com
+Tue Feb 23 00:53:39.891 [initandlisten] db version v2.4.9
+Tue Feb 23 00:53:39.891 [initandlisten] git version: nogitversion
+Tue Feb 23 00:53:39.891 [initandlisten] build info: Linux x86-025.build.eng.bos.redhat.com 2.6.32-431.5.1.el6.x86_64 #1 SMP Fri Jan 10 14:46:43 EST 2014 x86_64 BOOST_LIB_VERSION=1_41
+Tue Feb 23 00:53:39.891 [initandlisten] allocator: tcmalloc
+Tue Feb 23 00:53:39.891 [initandlisten] options: { auth: true, bind_ip: "127.3.95.2", command: [ "run" ], config: "/var/lib/openshift/56c8691489f5cf5b56000141/mongodb//conf/mongodb.conf", dbpath: "/var/lib/openshift/56c8691489f5cf5b56000141/mongodb/data/", nohttpinterface: "true", noprealloc: "true", pidfilepath: "/var/lib/openshift/56c8691489f5cf5b56000141/mongodb/pid/mongodb.pid", quiet: "true", smallfiles: "true" }
+Tue Feb 23 00:53:39.894 [initandlisten] journal dir=/var/lib/openshift/56c8691489f5cf5b56000141/mongodb/data/journal
+Tue Feb 23 00:53:39.894 [initandlisten] recover : no journal files present, no recovery needed
+Tue Feb 23 00:53:40.141 [initandlisten] waiting for connections on port 27017
+Tue Feb 23 00:53:40.891 [conn1]  authenticate db: admin { authenticate: 1, nonce: "2f6c418fcbb780a9", user: "admin", key: "a18cd6fdcfcd136301e2c3df803bb220" }
+
+==> app-root/logs/rockmongo.log <==
+101.127.226.108 - - [22/Feb/2016:23:34:58 -0500] "GET /rockmongo/index.php?action=admin.dbs HTTP/1.1" 200 4288 "http://ruby-vvydmk.rhcloud.com/rockmongo/index.php?action=admin.index&host=0" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.11; rv:44.0) Gecko/20100101 Firefox/44.0"
+[Tue Feb 23 00:51:21 2016] [notice] caught SIGWINCH, shutting down gracefully
+- - - [23/Feb/2016:00:51:21 -0500] "OPTIONS * HTTP/1.0" 200 - "-" "Apache/2.2.15 (Red Hat) (internal dummy connection)"
+[Tue Feb 23 00:53:42 2016] [warn] module php5_module is already loaded, skipping
+[Tue Feb 23 00:53:42 2016] [notice] SELinux policy enabled; httpd running as context unconfined_u:system_r:openshift_t:s0:c1,c704
+[Tue Feb 23 00:53:42 2016] [warn] module php5_module is already loaded, skipping
+PHP Warning:  Module 'mongo' already loaded in Unknown on line 0
+[Tue Feb 23 00:53:42 2016] [notice] Digest: generating secret for digest authentication ...
+[Tue Feb 23 00:53:42 2016] [notice] Digest: done
+[Tue Feb 23 00:53:42 2016] [notice] Apache/2.2.15 (Unix) PHP/5.3.3 configured -- resuming normal operations
+
+==> app-root/logs/ruby.log <==
+[ 2016-02-23 00:55:26.9997 299243/7f4d405fb700 Pool2/Spawner.h:738 ]: [App 300473 stdout] There is a configuration error with the current mongoid.yml.
+[ 2016-02-23 00:55:26.9998 299243/7f4d405fb700 Pool2/Spawner.h:738 ]: [App 300473 stdout] 
+[ 2016-02-23 00:55:26.9998 299243/7f4d405fb700 Pool2/Spawner.h:738 ]: [App 300473 stdout] message:
+[ 2016-02-23 00:55:26.9998 299243/7f4d405fb700 Pool2/Spawner.h:738 ]: [App 300473 stdout]   No hosts provided for client configuration: :default.
+[ 2016-02-23 00:55:26.9998 299243/7f4d405fb700 Pool2/Spawner.h:738 ]: [App 300473 stdout] summary:
+[ 2016-02-23 00:55:26.9998 299243/7f4d405fb700 Pool2/Spawner.h:738 ]: [App 300473 stdout]   Each client configuration must provide hosts so Mongoid knows where the database server is located. What was provided was: {"database"=>"ruby", "host"=>"127.3.95.2", "port"=>27017, "options"=>{"user"=>"admin", "password"=>"6dWPx698Z-9k"}}.
+[ 2016-02-23 00:55:26.9998 299243/7f4d405fb700 Pool2/Spawner.h:738 ]: [App 300473 stdout] resolution:
+[ 2016-02-23 00:55:26.9998 299243/7f4d405fb700 Pool2/Spawner.h:738 ]: [App 300473 stdout]   If configuring via a mongoid.yml, ensure that within your :default section a :hosts value for the client hosts is defined.
+[ 2016-02-23 00:55:26.9999 299243/7f4d405fb700 Pool2/Spawner.h:738 ]: [App 300473 stdout] 
+[ 2016-02-23 00:55:26.9999 299243/7f4d405fb700 Pool2/Spawner.h:738 ]: [App 300473 stdout]  Example:
+[ 2016-02-23 00:55:26.9999 299243/7f4d405fb700 Pool2/Spawner.h:738 ]: [App 300473 stdout]    development:
+[ 2016-02-23 00:55:26.9999 299243/7f4d405fb700 Pool2/Spawner.h:738 ]: [App 300473 stdout]      clients:
+[ 2016-02-23 00:55:26.9999 299243/7f4d405fb700 Pool2/Spawner.h:738 ]: [App 300473 stdout]        default:
+[ 2016-02-23 00:55:26.9999 299243/7f4d405fb700 Pool2/Spawner.h:738 ]: [App 300473 stdout]          database: my_app_db
+[ 2016-02-23 00:55:26.9999 299243/7f4d405fb700 Pool2/Spawner.h:738 ]: [App 300473 stdout]          hosts:
+[ 2016-02-23 00:55:26.9999 299243/7f4d405fb700 Pool2/Spawner.h:738 ]: [App 300473 stdout]            - localhost:27017
+[ 2016-02-23 00:55:27.0000 299243/7f4d405fb700 Pool2/Spawner.h:738 ]: [App 300473 stdout] 
