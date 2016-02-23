@@ -62,3 +62,18 @@ PHP Warning:  Module 'mongo' already loaded in Unknown on line 0
 [ 2016-02-23 00:55:26.9999 299243/7f4d405fb700 Pool2/Spawner.h:738 ]: [App 300473 stdout]          hosts:
 [ 2016-02-23 00:55:26.9999 299243/7f4d405fb700 Pool2/Spawner.h:738 ]: [App 300473 stdout]            - localhost:27017
 [ 2016-02-23 00:55:27.0000 299243/7f4d405fb700 Pool2/Spawner.h:738 ]: [App 300473 stdout] 
+
+=============================================================================================
+
+ - - [23/Feb/2016:01:25:27 -0500] "HEAD / HTTP/1.1" 500 - "-" "-"
+[ 2016-02-23 01:25:45.5024 427594/7fd692bfd700 agents/HelperAgent/RequestHandler.h:1971 ]: [Client 21] Cannot checkout session. An error occured while starting the web application.
+Error page:
+message:
+  Both uri and standard configuration options defined for client: 'default'.
+summary:
+  Instead of simply giving uri or standard options a preference order, Mongoid assumes that you have made a mistake in your configuration and requires that you provide one or the other, but not both. The options that were provided were: {"database"=>"ruby", "uri"=>"mongodb://admin:6dWPx698Z-9k@127.3.95.2:27017/", "host"=>"127.3.95.2", "port"=>27017, "options"=>{"user"=>"admin", "password"=>"6dWPx698Z-9k"}}.
+resolution:
+  Provide either only a uri as configuration or only standard options. (Mongoid::Errors::MixedClientConfiguration)
+  /var/lib/openshift/56c8691489f5cf5b56000141/app-root/runtime/repo/vendor/bundle/ruby/gems/mongoid-5.1.1/lib/mongoid/config/validators/client.rb:84:in `validate_client_uri'
+  /var/lib/openshift/56c8691489f5cf5b56000141/app-root/runtime/repo/vendor/bundle/ruby/gems/mongoid-5.1.1/lib/mongoid/config/validators/client.rb:30:in `block in validate'
+  /var/lib/openshift/56c8691489f5cf5b56000141/app-root/runtime/repo/vendor/bundle/ruby/gems/mongoid-5.1.1/lib/mongoid/config/validators/client.rb:27:in `each_pair'
