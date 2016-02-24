@@ -76,6 +76,9 @@ if we need to run bundle install locally (e.g. to generate the Gemfile.lock file
 to delete off the global bundle config:
 bundle
 
+or to remove the local bundle config, run:
+bundle config --local build.nokogiri ""
+
 -a ruby: here is the <application name>
 rhc env set RAILS_ENV=development -a ruby
 rhc env-unset RAILS_ENV -a ruby
