@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'user/fblogin'
+
   root to: 'index#index'
   get 'index/index'
 

@@ -93,3 +93,30 @@ It is actually working, just that the collection mongoid is searching is score_d
 puts "#{ENV['$OPENSHIFT_MONGODB_DB_HOST']}:#{ENV['OPENSHIFT_MONGODB_DB_PORT']}"
 <%= "#{ENV['$OPENSHIFT_MONGODB_DB_HOST']}:#{ENV['$OPENSHIFT_MONGODB_DB_PORT']}" %>
 http://help.cloud66.com/database-management/mongodb-replica-sets
+
+=======================================================================================
+For daimoku challenge server: Started 27 February 2016
+
+Hakims-MacBook-Pro:openshift-vvydmk hakimhauston$ ./bin/rails generate controller user fblogin
+      create  app/controllers/user_controller.rb
+       route  get 'user/fblogin'
+      invoke  erb
+      create    app/views/user
+      create    app/views/user/fblogin.html.erb
+      invoke  test_unit
+      create    test/controllers/user_controller_test.rb
+      invoke  helper
+      create    app/helpers/user_helper.rb
+      invoke    test_unit
+      invoke  assets
+      invoke    coffee
+      create      app/assets/javascripts/user.coffee
+      invoke    scss
+      create      app/assets/stylesheets/user.scss
+Hakims-MacBook-Pro:openshift-vvydmk hakimhauston$ ./bin/rails generate model User
+      invoke  mongoid
+      create    app/models/user.rb
+      invoke    test_unit
+      create      test/models/user_test.rb
+      create      test/fixtures/users.yml
+Hakims-MacBook-Pro:openshift-vvydmk hakimhauston$ 
