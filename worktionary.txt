@@ -120,3 +120,10 @@ Hakims-MacBook-Pro:openshift-vvydmk hakimhauston$ ./bin/rails generate model Use
       create      test/models/user_test.rb
       create      test/fixtures/users.yml
 Hakims-MacBook-Pro:openshift-vvydmk hakimhauston$ 
+
+error:
+http://localhost:3000/user/fblogin/10154127801799546/hakim
+result:
+{"_id":{"$oid":"56d2872f00af597fa584e366"},"authData":{"facebook":{"access_token":"CAAWtEfU555EBAG2QksAEQnLMXJP9lOpHMHPV6ZChKYmKQrjYu8w3K4VFBvUBQ86Uxa8EU8LyFFLFrASBvcHcjh7dZBIAtVyIGjV9ECBc1soKEFdKx7QBcU3j1S1P7tLArec43FWFrmmjmCiu1Qlq6g2y96ZBNEyJWo1OsPKQ7RGrHdia5wPRBEAFpAkCk3TGdtEB3L6ydDL8h0Qnb4PXODS4s0B44Bm0XZCQWsg4HgZDZD","expiration_date":"2015-12-19T14:17:25.000Z","id":"10154127801799546"}},"bcryptPassword":"$2a$10$..uyc0vx3l3MRLX.JIiSr.SQ2/fb7MepKW8xhzvYHuadXzVw3DbDG","competitorFbid":null,"createdAt":null,"created_at":null,"facebookname":null,"fbid":null,"objectId":"H5cEMtUzMo","runCount":790,"sessionToken":"KGtW7lAhH1EFm4onMk3bbZZ2b","updatedAt":null,"updated_at":null,"username":"MN79Ddn7Joij2YDBB64LLGZBs"}
+waiting response:
+http://stackoverflow.com/questions/35679841/mongoid-criteria-result-doesnt-fill-all-field
