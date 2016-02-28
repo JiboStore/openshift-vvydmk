@@ -35,7 +35,8 @@ class UserController < ApplicationController
     #userSearchCriteria = User.find_by(fbid: params[:fbid])
     #userSearchCriteria = User.where(fbid: params[:fbid]).first
     userSearchCriteria = User.where(:fbid.ne => nil).first
-    render :json => userSearchCriteria      
+    @result = User.where(fbid: params[:fbid]).first
+    #render :json => userSearchCriteria      
     #@result = userSearchCriteria
     
   end

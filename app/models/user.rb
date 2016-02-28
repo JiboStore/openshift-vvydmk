@@ -6,6 +6,7 @@ class User
   include Mongoid::Timestamps
   #field :_id, type: String, default: ->{ name } # which was `key :name` before v3
   field :fbid, type: String
+  field :facebookname, type: String
   field :competitorFbid, type: String
   field :createdAt, type: String
   field :updatedAt, type: String
@@ -24,11 +25,11 @@ class User
   def writeasjson
     #JSON.parse(@self.to_json(:everything))
     #@fbid
-    hash = { :fbid => @fbid, 
-      :facebookname => @facebookname, 
-      :competitorFbid => @competitorFbid, 
-      :createdAt => @createdAt,
-      :updatedAt => @updatedAt
+    hash = { :fbid => self.fbid, 
+      :facebookname => self.facebookname, 
+      :competitorFbid => self.competitorFbid, 
+      :createdAt => self.createdAt,
+      :updatedAt => self.updatedAt
     }
     hash.to_json
   end
