@@ -5,7 +5,21 @@ class Pojo
 end
 
 class UserController < ApplicationController
+  
   def fblogin
+    userExist = User.where(fbid: params[:fbid]).first
+    if ( userExist == nil ) then
+      #render :text => "User does not exist"
+      userExist = User.new(:fbid => params[:fbid], :facebookname => params[:facebookname])
+      #userExist.initwithparams(:fbid => params[:fbid], :facebookname => params[:facebookname])
+    end
+    userExist.updatedAt = Time.now.to_s
+    userExist.runCount = userExist.runCount == nil ? 0 : userExist.runCount + 1
+    userExist.save
+    render :json => userExist
+  end
+  
+  def fblogin_fortest
     #@userparam = User.new :fbid => params[:fbid], :facebookname => params[:facebookname], :competitorFbid => params[:competitorFbid]
     ##@pojo = Pojo.new
     ##@pojo.fbid = "566020605"
@@ -31,7 +45,8 @@ class UserController < ApplicationController
       render :json => userCriteria
 =end
     
-    
+    # this one is working
+    # http://stackoverflow.com/a/35686889/474330
     #userSearchCriteria = User.find_by(fbid: params[:fbid])
     #userSearchCriteria = User.where(fbid: params[:fbid]).first
     userSearchCriteria = User.where(:fbid.ne => nil).first
