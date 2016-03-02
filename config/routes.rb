@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'scoredaily/save'
+
+  get 'scoredaily/retrieve'
+
   root to: 'index#index'
   get 'index/index'
   
