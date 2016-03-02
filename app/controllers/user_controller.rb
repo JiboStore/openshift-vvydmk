@@ -16,7 +16,14 @@ class UserController < ApplicationController
     userExist.updatedAt = Time.now.to_s
     userExist.runCount = userExist.runCount == nil ? 0 : userExist.runCount + 1
     userExist.save
-    render :json => userExist
+    session[:userid] = userExist.fbid #keep current userid in session
+    #render :json => userExist
+    render :text => session[:userid]
+  end
+  
+  def fbchangecompetitor
+    userId = session[:userid]
+    render :text => userId.fbid
   end
   
   def fblogin_fortest

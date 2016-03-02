@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get 'index/index'
   
   get 'user/fblogin/:fbid/:facebookname(/:competitorFbid)' => 'user#fblogin'
+  
+  get 'user/fbchangecompetitor' => 'user#fbchangecompetitor'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
