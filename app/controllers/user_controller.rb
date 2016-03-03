@@ -23,7 +23,7 @@ class UserController < ApplicationController
   
   def fbchangecompetitor
     userId = session[:userid]
-    render :text => userId.fbid
+    render :text => userId
   end
   
   def fblogin_fortest
