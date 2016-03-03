@@ -1,7 +1,7 @@
 require File.expand_path('../boot', __FILE__)
 
-#require 'rails/all'
-
+#require 'rails/all' #original
+# =begin
 #require "rails"
 # Pick the frameworks you want:
 require "active_model/railtie"
@@ -12,6 +12,7 @@ require "action_mailer/railtie"
 require "action_view/railtie"
 require "sprockets/railtie"
 require "rails/test_unit/railtie"
+# =end
 
 require 'rails/mongoid'
 
@@ -32,24 +33,12 @@ module OpenshiftVvydmk
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
-
-    # Do not swallow errors in after_commit/after_rollback callbacks.
-    #config.active_record.raise_in_transactional_callbacks = true
-    
-    config.api_only = true
     
     config.generators do |g|
       g.orm :mongoid
     end
-    
-    #config.middleware.use Rack::Session::Cookie
-    
-    config.middleware.insert_after ActionDispatch::ParamsParser, ActionDispatch::Cookies
-    config.middleware.insert_after ActionDispatch::ParamsParser, ActionDispatch::Session::CookieStore
-    
-    config.middleware.use ActionDispatch::Cookies
-    
-    #Mongoid.load!("config/mongoid.yml")
-    
+
+    # Do not swallow errors in after_commit/after_rollback callbacks.
+    # config.active_record.raise_in_transactional_callbacks = true
   end
 end
