@@ -17,8 +17,14 @@ class UserController < ApplicationController
     userExist.runCount = userExist.runCount == nil ? 0 : userExist.runCount + 1
     userExist.save
     session[:userid] = userExist.fbid #keep current userid in session
-    #render :json => userExist
-    render :text => session[:userid]
+    #logger.debug "userExist => #{userExist.to_yaml}"
+    #logger.debug "userExist => #{userExist.to_s}"
+    #logger.debug "session => #{session[:userid]}"
+    #logger.debug "session => #{session.to_yaml}" # can't dump anonymous module
+    logger.debug "userExist => #{userExist.writeasjson}"
+    logger.debug "userExist => #{session[:userid]}"
+    render :json => userExist
+    #render :text => session[:userid]
   end
   
   def fbchangecompetitor
