@@ -1,3 +1,6 @@
+include ActionController::Helpers
+include ActionController::Cookies
+
 class ApplicationController < ActionController::Base
   #include ActionController::Serialization
   

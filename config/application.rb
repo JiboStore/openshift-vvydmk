@@ -42,6 +42,9 @@ module OpenshiftVvydmk
       g.orm :mongoid
     end
     
+    config.middleware.insert_after ActionDispatch::ParamsParser, ActionDispatch::Cookies
+    config.middleware.insert_after ActionDispatch::ParamsParser, ActionDispatch::Session::CookieStore
+    
     #Mongoid.load!("config/mongoid.yml")
     
   end
