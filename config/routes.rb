@@ -7,9 +7,9 @@ Rails.application.routes.draw do
   root to: 'index#index'
   get 'index/index'
   
-  get 'user/fblogin/:fbid/:facebookname(/:competitorFbid)' => 'user#fblogin'
+  get 'user/fblogin/:fbid/:facebookname(/:competitorFbid)(/:accessToken)' => 'user#fblogin'
   
-  get 'user/fbchangecompetitor' => 'user#fbchangecompetitor'
+  get 'user/fbchangecompetitor(/:competitorFbid)' => 'user#fbchangecompetitor'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

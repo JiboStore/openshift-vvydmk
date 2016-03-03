@@ -13,6 +13,12 @@ class UserController < ApplicationController
       userExist = User.new(:fbid => params[:fbid], :facebookname => params[:facebookname])
       #userExist.initwithparams(:fbid => params[:fbid], :facebookname => params[:facebookname])
     end
+    if ( params.has_key?(:competitorFbid) ) then
+      userExist.competitorFbid = params[:competitorFbid]
+    end
+    if ( params.has_key?(:accessToken) ) then
+      userExist.accessToken = params[:accessToken]
+    end
     userExist.updatedAt = Time.now.to_s
     userExist.runCount = userExist.runCount == nil ? 0 : userExist.runCount + 1
     userExist.save
@@ -28,8 +34,23 @@ class UserController < ApplicationController
   end
   
   def fbchangecompetitor
-    userId = session[:userid]
-    render :text => userId
+    userExist = session[:userid] == nil ? nil : User.where(fbid: session[:userid]).first
+    if ( userExist == nil ) then
+      # unauthorized
+      response = {:code => 403, :message => "forbidden access"}
+      logger.debug "user/fbchangecompetitor : unable to find user"
+      render json: response.to_json, status: 403 and return
+    elsif ( params[:competitorFbid] == nil ) then
+      response = {:code => 404, :message => "invalid param"}
+      logger.debug "user/fbchangecompetitor : invalid param"
+      #render :json => response.to_json, status: 403 and return #this_is_also_ok: :json => response.to_json, status: 403
+      render json: response.to_json, status: 403 and return
+    end
+    userExist.competitorFbid = params[:competitorFbid]
+    userExist.save
+    logger.debug "userExist => #{userExist.writeasjson}"
+    render json: userExist.to_json
+    #render :text => userId
   end
   
   def fblogin_fortest

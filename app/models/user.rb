@@ -1,4 +1,4 @@
-require 'pp'
+#require 'pp'
 require 'json'
 
 class User
@@ -8,6 +8,7 @@ class User
   field :fbid, type: String
   field :facebookname, type: String
   field :competitorFbid, type: String
+  field :accessToken, type: String
   field :runCount, type: Integer
   field :createdAt, type: String
   field :updatedAt, type: String
@@ -29,6 +30,7 @@ class User
       self.fbid = options.fetch(:fbid, '')
       self.facebookname = options.fetch(:facebookname, '')
       self.competitorFbid = options.fetch(:competitorFbid, '')
+      self.accessToken = options.fetch(:accessToken, '')
       self.runCount = 0
       # all the following ways are ok! for more info: https://mongoid.github.io/en/mongoid/docs/documents.html#dynamic_fields
       #write_attribute(:fbid, options.fetch(:fbid, ''))
@@ -58,6 +60,7 @@ class User
     hash = { :fbid => self.fbid, 
       :facebookname => self.facebookname, 
       :competitorFbid => self.competitorFbid, 
+      :accessToken => self.accessToken,
       :createdAt => self.createdAt,
       :updatedAt => self.updatedAt
     }
