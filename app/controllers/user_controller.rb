@@ -13,6 +13,9 @@ class UserController < ApplicationController
       userExist = User.new(:fbid => params[:fbid], :facebookname => params[:facebookname])
       #userExist.initwithparams(:fbid => params[:fbid], :facebookname => params[:facebookname])
     end
+    if ( params.has_key?(:facebookname) ) theb
+      userExist.facebookname = params[:facebookname]
+    end
     if ( params.has_key?(:competitorFbid) ) then
       userExist.competitorFbid = params[:competitorFbid]
     end
