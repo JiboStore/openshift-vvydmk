@@ -132,3 +132,5 @@ testing POST with curl:
 curl -d "paramkey=paramvalue" http://localhost:3000/scoredaily/calculatescoreformonth
 HakimRocketsMBP:openshift-vvydmk HakimHauston$ curl -d "hello=world" http://localhost:3000/scoredaily/calculatescoreformonth
 {"hello":"world","controller":"scoredaily","action":"calculatescoreformonth"}HakimRocketsMBP:openshift-vvydmk HakimHauston$ 
+
+curl -d "userid=566020605&year=2016&month=03" http://localhost:3000/scoredaily/calculatemonthly

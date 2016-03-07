@@ -3,8 +3,6 @@ Rails.application.routes.draw do
   get 'scoredaily/save'
 
   get 'scoredaily/retrieve'
-  
-  match 'scoredaily/calculatescoreformonth' => 'scoredaily#calculatescoreformonth', :via => :post
 
   root to: 'index#index'
   get 'index/index'
@@ -12,6 +10,10 @@ Rails.application.routes.draw do
   get 'user/fblogin/:fbid/:facebookname(/:competitorFbid)(/:accessToken)' => 'user#fblogin'
   
   get 'user/fbchangecompetitor(/:competitorFbid)' => 'user#fbchangecompetitor'
+  
+  match 'scoredaily/calculatescoreformonth' => 'scoredaily#calculatescoreformonth', :via => :post
+  
+  post 'scoredaily/calculatemonthly' => 'scoredaily#calculatemonthly'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
