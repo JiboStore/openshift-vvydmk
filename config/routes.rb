@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   
   match 'scoredaily/calculatescoreformonth' => 'scoredaily#calculatescoreformonth', :via => :post
   
+  post 'scoredaily/submitscoredaily' => 'scoredaily#submitscoredaily'
+  
   post 'scoredaily/calculatemonthly' => 'scoredaily#calculatemonthly'
 
   # The priority is based upon order of creation: first created -> highest priority.

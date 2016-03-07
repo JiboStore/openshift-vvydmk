@@ -134,3 +134,6 @@ HakimRocketsMBP:openshift-vvydmk HakimHauston$ curl -d "hello=world" http://loca
 {"hello":"world","controller":"scoredaily","action":"calculatescoreformonth"}HakimRocketsMBP:openshift-vvydmk HakimHauston$ 
 
 curl -d "userid=566020605&year=2016&month=03" http://localhost:3000/scoredaily/calculatemonthly
+
+create and/or update scoredaily:
+curl -d "userid=10153368070540606&scoredate=2016-03-07&score=20" http://localhost:3000/scoredaily/submitscoredaily
