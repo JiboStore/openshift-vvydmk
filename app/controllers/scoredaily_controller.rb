@@ -4,4 +4,8 @@ class ScoredailyController < ApplicationController
 
   def retrieve
   end
+  
+  def calculatescoreformonth
+    render :json => params
+  end
 end

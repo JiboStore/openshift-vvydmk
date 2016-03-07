@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get 'scoredaily/save'
 
   get 'scoredaily/retrieve'
+  
+  match 'scoredaily/calculatescoreformonth' => 'scoredaily#calculatescoreformonth', :via => :post
 
   root to: 'index#index'
   get 'index/index'
