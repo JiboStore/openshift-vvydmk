@@ -1,4 +1,5 @@
-class ScoreDaily
+# this will check on scoredailies collections in mongodb
+class Scoredaily
   include Mongoid::Document
   include Mongoid::Timestamps
   field :fbid, type: String

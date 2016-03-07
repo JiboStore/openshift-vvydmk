@@ -1,8 +1,8 @@
 class IndexController < ApplicationController
   def index
     #@checkConnection = check_mongoid_connection
-    @totalCount = ScoreDaily.count
-    @onehourCriteria = ScoreDaily.where(score: 60)
+    @totalCount = Scoredaily.count
+    @onehourCriteria = Scoredaily.where(score: 60)
   end
   
   def check_mongoid_connection
