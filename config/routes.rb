@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   
   post 'scoredaily/submitscoredaily' => 'scoredaily#submitscoredaily'
   
-  post 'scoredaily/calculatemonthly' => 'scoredaily#calculatemonthly'
+  #post 'scoredaily/calculatemonthly' => 'scoredaily#calculatemonthly'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
