@@ -86,7 +86,9 @@ class ScoredailyController < ApplicationController
   
   def submitscoredaily
     #userid = params[:userid]
+    logger.debug "submitscoredaily: fbid = #{session[:userid]}"
     userid = session[:userid]
+    logger.debug "submitscoredaily: fbid = #{userid}"
     userExist = User.where(fbid: userid).first
     if ( userExist == nil ) then
       response = {:code => 403, :message => "forbidden access"}

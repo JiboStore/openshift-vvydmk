@@ -26,6 +26,7 @@ class UserController < ApplicationController
     userExist.runCount = userExist.runCount == nil ? 0 : userExist.runCount + 1
     userExist.save
     session[:userid] = userExist.fbid #keep current userid in session
+    logger.debug "fblogin: fbid = #{session[:userid]}"
     #logger.debug "userExist => #{userExist.to_yaml}"
     #logger.debug "userExist => #{userExist.to_s}"
     #logger.debug "session => #{session[:userid]}"
@@ -38,6 +39,7 @@ class UserController < ApplicationController
   
   def fbchangecompetitor
     userExist = session[:userid] == nil ? nil : User.where(fbid: session[:userid]).first
+    logger.debug "fbchangecompetitor: fbid = #{session[:userid]}"
     if ( userExist == nil ) then
       # unauthorized
       response = {:code => 403, :message => "forbidden access"}
