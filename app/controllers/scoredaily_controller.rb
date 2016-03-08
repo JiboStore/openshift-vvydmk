@@ -9,8 +9,8 @@ class ScoredailyController < ApplicationController
   end
   
   def calculatescoreformonth
-    userid = params[:userid]
-    #userid = session[:userid]
+    #userid = params[:userid]
+    userid = session[:userid]
     userExist = User.where(fbid: userid).first
     if ( userExist == nil ) then
       response = {:code => 403, :message => "forbidden access"}
@@ -102,9 +102,9 @@ class ScoredailyController < ApplicationController
   end
   
   def submitscoredaily
-    userid = params[:userid]
+    #userid = params[:userid]
     logger.debug "submitscoredaily: fbid = #{session[:userid]}"
-    #userid = session[:userid]
+    userid = session[:userid]
     logger.debug "submitscoredaily: fbid = #{userid}"
     userExist = User.where(fbid: userid).first
     if ( userExist == nil ) then
