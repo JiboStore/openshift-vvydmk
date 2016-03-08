@@ -18,6 +18,7 @@ class ScoredailyController < ApplicationController
       #render :json => response.to_json, :status => 403 and return #this_is_fine_too
       render json: response.to_json, status: 403 and return
     end
+    enemyExist = User.where(fbid: userExist.competitorFbid).first
     dateInMonth = Date.parse(params[:datemonth])
     dateStart = dateInMonth.at_beginning_of_month
     dateEnd = dateInMonth.end_of_month
@@ -71,8 +72,24 @@ class ScoredailyController < ApplicationController
       end
     end
 =end
+    userName = userExist.facebookname
+    enemyName = userExist.competitorFbid
+    if ( enemyExist != nil ) then
+      enemyName = enemyExist.facebookname
+    end
+    response = {:myFbid => userExist.fbid, 
+      :myName => userName, 
+      :competitorFbid => userExist.competitorFbid, 
+      :competitorName => enemyName,
+      :myWin => winMine,
+      :competitorWin => winEnemy,
+      :myTotal => totalMine,
+      :competitorTotal => totalEnemy
+    }
     logger.debug "scoredaily/calculatescoreformonth: #{winMine} vs #{winEnemy} = #{totalMine} vs #{totalEnemy}"
-    render :json => scoresMine
+    logger.debug "scoredaily/calculatescoreformonth: #{response.to_json}"
+    #render :json => scoresMine
+    render :json => response.to_json
 =begin
     dateLow = Date.parse("2016-03-06")
     dateHigh = Date.parse("2016-03-09")
