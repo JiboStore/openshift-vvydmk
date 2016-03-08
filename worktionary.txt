@@ -163,3 +163,5 @@ curl -d "userid=10154127801799546&scoredate=2016-03-07&score=70" http://ruby-vvy
 curl -d "userid=10154127801799546&scoredate=2016-03-08&score=80" http://ruby-vvydmk.rhcloud.com/scoredaily/submitscoredaily
 curl -d "userid=10154127801799546&scoredate=2016-03-09&score=90" http://ruby-vvydmk.rhcloud.com/scoredaily/submitscoredaily
 curl -d "userid=10154127801799546&scoredate=2016-03-10&score=100" http://ruby-vvydmk.rhcloud.com/scoredaily/submitscoredaily
+
+curl -d "userid=10153368070540606&datemonth=2016-03-08" http://ruby-vvydmk.rhcloud.com/scoredaily/calculatescoreformonth
